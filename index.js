@@ -1,8 +1,13 @@
 const compression = require('compression');
 const express = require('express');
+var bodyParser = require('body-parser');
 const app = express();
 const routes = require('./routes');
+const db = require('./db');
 
+require('dotenv').config();
+db.connectToDB();
+app.use(bodyParser.json({ limit: '50mb' }));
 app.use(compression());
 
 for (let route in routes) {

@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/spleat-team/server#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "compression": "^1.7.3",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "mongoose": "^5.4.0"
+    "mongoose": "^5.4.0",
+    "shortid": "^2.2.14"
   }
 }
