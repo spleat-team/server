@@ -6,13 +6,6 @@ var MongooseMap = mongoose.Schema.Types.Map;
 var MongooseNumber = mongoose.Schema.Types.Number;
 
 var receiptSchema = new mongoose.Schema({
-  //   _id: {
-  //     type: O
-  //   },
-  //   users: {
-  //     type: MongooseMap,
-  //     of: MongooseNumber
-  //   },
   pincode: {
     type: MongooseString,
     default: shortid.generate
@@ -21,11 +14,13 @@ var receiptSchema = new mongoose.Schema({
     type: MongooseNumber
   },
   image: MongooseString,
+  price: MongooseNumber,
   dishes: [
     {
       name: MongooseString,
       amount: MongooseNumber,
-      usersIds: [MongooseString]
+      usersIds: [MongooseString],
+      price: MongooseNumber
     }
   ]
 });

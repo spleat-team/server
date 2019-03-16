@@ -19,12 +19,13 @@ router.post('/', async (req, res) => {
 });
 
 router.get('/:pincode', async (req, res) => {
-  const reciept = await Reciept.find({ _id: req.params.pincode });
+  const receipt = await Receipt.findOne({ pincode: req.params.pincode });
   res.send(receipt);
 });
 
-router.post('/:pincode/dishes', (req, res) => {
-  res.send(req.params.pincode);
-});
+// router.post('/:pincode/dishes', async (req, res) => {
+//   const receipt = await Receipt.find({ _id: req.params.pincode });
+//   res.send(receipt);
+// });
 
 module.exports = router;
