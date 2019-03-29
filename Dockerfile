@@ -18,4 +18,4 @@ COPY --chown=$USER:$USER . .
 
 EXPOSE $PORT
 
-CMD [ "node", "app.js" ]
+CMD [ "node", "index.js" ]
