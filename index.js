@@ -18,5 +18,9 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-const port = 8000;
+app.get('/generate204', (req, res) => {
+  res.status(204).send();
+});
+
+const port = 8080;
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
