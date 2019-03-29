@@ -9,9 +9,11 @@ router.post('/', async (req, res) => {
       {
         name: 'מנה טעימה',
         amount: 3,
-        users: []
+        usersIds: [],
+        price: 50
       }
-    ]
+    ],
+    price: 50
   });
 
   const r = await receipt.save();
